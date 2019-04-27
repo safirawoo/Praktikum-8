@@ -10,19 +10,6 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Dashboard
-        <small>Control panel</small>
-      </h1>
-      <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
-            <li class="active">Dashboard</li>
-            <li class="active">Master Data Buku</li>
-          </ol>
-    </section>
-    <!-- Main content -->
     <section class="content">
       <div class="row">
             <div class="col-xs-12">
@@ -40,7 +27,7 @@
                 <?php } ?>
                 <div class="box-header">
                   <h3 class="box-title">Data Buku
-                    <a class="btn btn-flat btn-success btn-sm" id="tambahBuku"><i class="fa fa-plus" > Tambah</i></a>
+                    <a class="btn btn-flat btn-success btn-sm" id="tambahBuku"><i class="fa fa-plus"></i></a>
                   </h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
@@ -70,7 +57,7 @@
                         <td><?=$item->TahunTerbit;?></td>
                         <td>
                             <a href="<?=base_url("/Perpustakaan/hapus/buku/{$item->Kd_Register}");?>" onclick="return confirm('Yakin Hapus Buku <?=$item->JudulBuku ?>?')" class="btn btn-danger btn-xs" alt="Hapus Kusri"><i class="fa fa-trash"></i> Hapus</a>
-                            <a 
+                            <a
                               data-id_buku="<?=$item->Kd_Register?>"
                               data-judul = "<?=$item->JudulBuku?>"
                               data-pengarang = "<?=$item->Pengarang?>"

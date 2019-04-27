@@ -30,7 +30,7 @@
               <div class="box-header">
                 <h3 class="box-title">Form Peminjaman Buku</h3>
               </div><!-- /.box-header -->
-              
+
               <div class="box-body">
                 <?php if($this->session->flashdata('msg_alert_error')) { ?>
                     <div class="alert alert-danger">
@@ -46,20 +46,20 @@
                   <div class="box-body">
                     <div class="form-group">
                       <label>Pilih Nama Anda</label>
-                      <select class="form-control" name="anggota">
+                       <select class="form-control" name="anggota">
                         <option value="">===PILIH===</option>
-                        <?php foreach ($anggota as $data) { ?>
+                         <?php foreach ($anggota as $data) { ?>
                           <option value="<?=$data->Kd_Anggota;?>"><?=$data->Nama;?></option>
-                        <?php } ?>
+                        <?php } ?> 
                       </select>
                     </div>
                     <div class="form-group">
-                      <label>Pilih Nama Petugas</label>
+                      <label>Pilih Petugas</label>
                         <select class="form-control" name="petugas" id="petugas" >
                             <?php foreach ($petugas as $data) {?>
                             <option value="<?=$data->Kd_Petugas?>"><?=$data->Nama?></option>
                             <?php } ?>
-                        </select>    
+                        </select>
                     </div>
                     <div class="form-group">
                       <label>Pilih Buku</label>
@@ -67,15 +67,15 @@
                             <?php foreach ($buku as $data) {?>
                             <option value="<?=$data->Kd_Register?>"><?=$data->JudulBuku?></option>
                             <?php } ?>
-                        </select>    
-                    </div> 
+                        </select>
+                    </div>
                     <!-- Btn -->
                     <div class="form-group">
                      <input type="submit" name="submit" value="Pinjam" class="btn btn-success">
                     </div>
                   </div>
-                 </form> 
-                
+                 </form>
+
               </div><!-- /.box-body -->
             </div><!-- /.box -->
 
@@ -84,7 +84,7 @@
       </section>
     </div>
 
-          
+
 
 <?php $this->load->view('admin/layoutA/footer') ?>
 
@@ -92,10 +92,9 @@
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
-<?php $this->load->view('admin/layoutA/scrip') ?>      
+<?php $this->load->view('admin/layoutA/scrip') ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="<?=base_url('assets/admin/plugins')?>/datatables/jquery.dataTables.min.js"></script>
   <script src="<?=base_url('assets/admin/plugins')?>/datatables/dataTables.bootstrap.min.js"></script>
-

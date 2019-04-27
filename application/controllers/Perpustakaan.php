@@ -70,7 +70,7 @@ class Perpustakaan extends CI_Controller {
 						redirect( base_url('Perpustakaan/listBuku') );
 					}
 
-		            $data['JudulBuku'] = $judul;
+		      $data['JudulBuku'] = $judul;
 					$data['Pengarang'] = $pengarang;
 					$data['Penerbit'] = $penerbit;
 					$data['TahunTerbit'] = $tahun;
@@ -93,7 +93,7 @@ class Perpustakaan extends CI_Controller {
 						redirect( base_url('Perpustakaan/listAnggota') );
 					}
 
-		            $data['Nama'] = $nama;
+		      $data['Nama'] = $nama;
 					$data['Jenjang'] = $jenjang;
 					$data['Prodi'] = $prodi;
 					$data['Alamat'] = $alamat;

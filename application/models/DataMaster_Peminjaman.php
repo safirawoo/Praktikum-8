@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class DataMaster_Peminjaman extends CI_Model {
 
 	public function list_all() {
-		$data = $this->db->select('pem.*,dp.*,p.nama as petugas, a.nama as anggota,b.*')
-					 ->from('peminjaman as pem')
-					 ->join('detail_pinjam as dp','pem.Kd_pinjam = dp.Kd_pinjam')
-					 ->join('petugas as p','pem.Kd_petugas = p.Kd_Petugas')
-					 ->join('anggota as a','pem.Kd_anggota = a.Kd_Anggota')
-					 ->join('buku as b','dp.Kd_register = b.Kd_Register')
+		$data = $this->db->select('pin.*,dp.*,p.nama as petugas, a.nama as anggota,b.*')
+					 ->from('peminjaman as pin')
+					 ->join('detail_pinjam as dp','pin.Kd_pinjam = dp.Kd_pinjam')
+					 ->join('petugas as p','pin.Kd_petugas = p.Kd_Petugas')
+					 	->join('buku as b','dp.Kd_register = b.Kd_Register')
+					 ->join('anggota as a','pin.Kd_anggota = a.Kd_Anggota')
 					 ->get();
 		return $data->result();
 	}
@@ -43,7 +43,7 @@ class DataMaster_Peminjaman extends CI_Model {
 				  ->order_by('Kd_pinjam','desc')
 				  ->limit(1)
 				  ->get();
-		
+
 		$id = $x->row()->Kd_pinjam;
 		$item['Kd_pinjam'] = $id;
 		//var_dump($item);

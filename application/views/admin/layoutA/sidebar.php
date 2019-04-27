@@ -12,16 +12,11 @@
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Peminjaman</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('Perpustakaan/pinjamBuku')?>"><i class="fa fa-circle-o"></i>Pinjam Buku</a></li>
-            <li><a href="<?php echo base_url('Perpustakaan/riwayatPeminjam')?>"><i class="fa fa-circle-o"></i>Riwayat Peminjaman Buku</a></li>
+            <br>
+            <br>
+            <li><a href="<?php echo base_url('Perpustakaan/pinjamBuku')?>" style="font-size:17px">Pinjam Buku</a></li>
+            <li><a href="<?php echo base_url('Perpustakaan/riwayatPeminjam')?>" style="font-size:17px">Riwayat Peminjaman Buku</a></li>
+            <li><a href="<?php echo base_url('/Perpustakaan')?>" style="font-size:17px"></i>Sign Out</a></li>
           </ul>
         </li>
       </ul>

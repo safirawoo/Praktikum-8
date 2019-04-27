@@ -9,7 +9,7 @@
     />
     <title>Perpustakaan</title>
     <!-- main css -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/landingPage')?>/css/style.css" />
+  
   </head>
 
   <body>
@@ -21,9 +21,11 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="banner_content text-center" style="margin-top: 15%;">
-                <h2 class="text-uppercase mt-4 mb-5">
-                  MASUK SEBAGAI
-                </h2>
+                <h1>
+                  <b>
+                  PILIH PERAN
+                </b>
+              </h1>
                 <br>
                   <a href="<?php echo base_url('/Perpustakaan/petugas'); ?>" style="color:black; margin-right: 60px; font-size: 24px">Petugas</a>
                   <a href="<?php echo base_url('/Perpustakaan/anggota'); ?>" style="color:black; font-size: 24px ">Anggota</a>

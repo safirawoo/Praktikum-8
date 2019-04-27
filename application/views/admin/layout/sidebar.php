@@ -14,10 +14,10 @@
       <ul class="sidebar-menu" data-widget="tree">
           <br>
           <br>
-            <li><a href="<?php echo base_url('/Perpustakaan/listBuku'); ?>"><i class="fa fa-circle-o"></i>Data Buku</a></li>
-            <li><a href="<?php echo base_url('/Perpustakaan/listAnggota'); ?>"><i class="fa fa-circle-o"></i>Data Anggota</a></li>
-            <li><a href="<?php echo base_url('/Perpustakaan/listPeminjaman'); ?>"><i class="fa fa-circle-o"></i>Data Peminjaman Buku</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Sign Out</a></li>
+            <li><a href="<?php echo base_url('/Perpustakaan/listBuku'); ?>" style="font-size:17px">Data Buku</a></li>
+            <li><a href="<?php echo base_url('/Perpustakaan/listAnggota'); ?>" style="font-size:17px"></i>Data Anggota</a></li>
+            <li><a href="<?php echo base_url('/Perpustakaan/listPeminjaman'); ?>" style="font-size:17px"></i>Data Peminjaman Buku</a></li>
+            <li><a href="<?php echo base_url('/Perpustakaan')?>" style="font-size:17px">Sign Out</a></li>
           </ul>
         </li>
       </ul>
