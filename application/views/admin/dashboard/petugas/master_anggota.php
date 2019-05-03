@@ -56,7 +56,7 @@
                         <td><?=$item->Jenjang;?></td>
                         <td><?=$item->Alamat;?></td>
                         <td>
-                            <a href="<?=base_url("/Perpustakaan/hapus/anggota/{$item->Kd_Anggota}");?>" onclick="return confirm('Yakin Hapus Buku <?=$item->Nama ?>?')" class="btn btn-danger btn-xs" alt="Hapus Kusri"><i class="fa fa-trash"></i> Hapus</a>
+                            <a href="<?=base_url("/Perpustakaan/hapus/anggota/{$item->Kd_Anggota}");?>" onclick="return confirm('Yakin Hapus Buku <?=$item->Nama ?>?')" class="btn btn-danger btn-xs" alt="Hapus Buku"><i class="fa fa-trash"></i> Hapus</a>
                             <a
                               data-id_anggota="<?=$item->Kd_Anggota?>"
                               data-nama = "<?=$item->Nama?>"

@@ -23,6 +23,10 @@ class Perpustakaan extends CI_Controller {
 	{
 		$this->load->view('admin/dashboard/anggota/index');
 	}
+	public function login()
+	{
+		$this->load->view('admin/dashboard/petugas/login');
+	}
 	public function index()
 	{
 		redirect( base_url() );
@@ -188,7 +192,7 @@ class Perpustakaan extends CI_Controller {
 						redirect( base_url('Perpustakaan/listAnggota') );
 					}
 
-		            $data['Nama'] = $nama;
+		      $data['Nama'] = $nama;
 					$data['Jenjang'] = $jenjang;
 					$data['Prodi'] = $prodi;
 					$data['Alamat'] = $alamat;
@@ -215,11 +219,10 @@ class Perpustakaan extends CI_Controller {
 					}
 
 					$id = $id_pinjam;
-
 					$data['Kd_anggota'] = $id_peminjam;
 					$data['Kd_petugas'] = $id_petugas;
 
-		            $item['Kd_register'] = $id_buku;
+		      $item['Kd_register'] = $id_buku;
 					$item['Tgl_kembali'] = $kembali;
 					$item['Tgl_pinjam'] = $pinjam;
 					//$data['sekarang'] = date('Y-m-d');

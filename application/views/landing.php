@@ -9,7 +9,7 @@
     />
     <title>Perpustakaan</title>
     <!-- main css -->
-  
+
   </head>
 
   <body>
@@ -27,7 +27,7 @@
                 </b>
               </h1>
                 <br>
-                  <a href="<?php echo base_url('/Perpustakaan/petugas'); ?>" style="color:black; margin-right: 60px; font-size: 24px">Petugas</a>
+                  <a href="<?php echo base_url('/Perpustakaan/login'); ?>" style="color:black; margin-right: 60px; font-size: 24px">Petugas</a>
                   <a href="<?php echo base_url('/Perpustakaan/anggota'); ?>" style="color:black; font-size: 24px ">Anggota</a>
               </div>
             </div>

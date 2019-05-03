@@ -10,7 +10,18 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-  </div>
+  <section class="content">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box">
+                <div class="box-body">
+                <h3>SELAMAT DATANG!</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
   <!-- /.content-wrapper -->
   <?php $this->load->view('admin/layoutA/footer') ?>
 
