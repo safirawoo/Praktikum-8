@@ -39,16 +39,6 @@
     <center>
     <div class="kotak">
       <form class="" action="<?php echo base_url('login/login'); ?>" method="post">
-        <?php if($this->session->flashdata('msg_alert_error')) { ?>
-              <div class="alert alert-danger">
-                  <?=$this->session->flashdata('msg_alert_error');?>
-              </div>
-        <?php } ?>
-        <?php if($this->session->flashdata('msg_alert')) { ?>
-              <div class="alert alert-success">
-                  <?=$this->session->flashdata('msg_alert');?>
-              </div>
-        <?php } ?>
         <h1 style="margin-top:-20px">LOGIN</h1>
         <br>
           <input type="text" name="username" class="input" placeholder="Username">
