@@ -20,6 +20,12 @@ class DataMaster_Peminjaman extends CI_Model {
 					 ->get();
 		return $data->result();
 	}
+
+	public function jumlah_data()
+	{
+		return $this->db->get('peminjaman')->num_rows();
+	}
+
 	public function anggota()
 	{
 		$data = $this->db->select('*')

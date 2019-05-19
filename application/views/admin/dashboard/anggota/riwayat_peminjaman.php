@@ -3,7 +3,6 @@
 <?php $this->load->view('admin/layoutA/head') ?>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
   <?php $this->load->view('admin/layoutA/header') ?>
   <!-- Left side column. contains the logo and sidebar -->
   <?php $this->load->view('admin/layoutA/sidebar') ?>
@@ -31,8 +30,9 @@
                   </h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                  <table id="dataBuku" class="table table-bordered table-hover">
+                  <input type="text" style="float:right" id="inputt" onkeyup="myFunction()" placeholder="Search" title="Type in a name">
 
+                  <table id="dataBuku" class="table table-bordered table-hover">
                     <thead>
                       <tr>
                         <th>No</th>
@@ -45,7 +45,7 @@
                     </thead>
                     <tbody>
                      <?php
-                     $i = 1;
+                     $i = $this->uri->segment('3') + 1;
                      foreach ($peminjam as $item){  ?>
                       <tr>
                         <td><?=$i++;?></td>
@@ -62,21 +62,13 @@
                           <?=$item->Tgl_kembali;?>
                         </td>
                         <?php } ?>
-
                       </tr>
                       <?php } ?>
                     </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>No</th>
-                        <th>Nama Peminjam</th>
-                        <th>Petugas Yang Melayani</th>
-                        <th>Judul Buku</th>
-                        <th>Tanggal Peminjaman</th>
-                        <th>Tanggal Mengembalikan</th>
-                      </tr>
-                    </tfoot>
                   </table>
+                  <?php
+                  echo $this->pagination->create_links();
+                  ?>
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
 
@@ -97,12 +89,30 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="<?=base_url('assets/admin/plugins')?>/datatables/jquery.dataTables.min.js"></script>
     <script src="<?=base_url('assets/admin/plugins')?>/datatables/dataTables.bootstrap.min.js"></script>
-
     <script>
-      $(function () {
-        $('#dataBuku').DataTable({"pageLength": 10});
-      });
+      // $(function () {
+      //   $('#dataBuku').DataTable({"pageLength": 10});
+      // });
 
+      function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("inputt");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("databuku");
+      tr = table.getElementsByTagName("tr");
+      //alert(tr.length);
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
     </script>
 
 @endsection
