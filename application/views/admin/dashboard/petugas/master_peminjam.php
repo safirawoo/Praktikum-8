@@ -54,7 +54,8 @@
                         <td><?=$item->Tgl_pinjam;?></td>
                         <?php if($item->Tgl_kembali == NULL || $item->Tgl_kembali == 0000-00-00){ ?>
                         <td>
-                          <a href="<?=base_url("/Perpustakaan/kembali/{$item->Kd_pinjam}");?>" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> Buku Kembali Hari ini ?</a>
+                          <a href="<?=base_url("/Perpustakaan/kembali/{$item->Kd_pinjam}");?>" class="btn btn-success btn-xs"><i class="fa fa-pencil">
+                          </i> Buku Kembali Hari ini ?</a>
                         </td>
                         <?php }else{ ?>
                         <td>

@@ -295,7 +295,6 @@ class Perpustakaan extends CI_Controller {
 			$buku= $this->security->xss_clean( $this->input->post('buku'));
 			$petugas= $this->security->xss_clean( $this->input->post('petugas'));
 			$anggota= $this->security->xss_clean( $this->input->post('anggota'));
-
 			// validasi
 			$this->form_validation->set_rules('anggota', 'Nama Anggot', 'required');
 			if(!$this->form_validation->run()) {
@@ -305,7 +304,6 @@ class Perpustakaan extends CI_Controller {
 
 			$data['Kd_anggota'] = $anggota;
 			$data['Kd_petugas'] = $petugas;
-
 			$item['Kd_register'] = $buku;
 			$item['Tgl_pinjam'] = date('Y-m-d');
 			$this->md_pem->peminjaman($data,$item);

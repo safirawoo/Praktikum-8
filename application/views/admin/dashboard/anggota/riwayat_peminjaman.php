@@ -30,7 +30,7 @@
                   </h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                  <input type="text" style="float:right" id="inputt" onkeyup="myFunction()" placeholder="Search" title="Type in a name">
+                  <input type="text" style="float:right" id="inputt" onkeyup="myFunction()" placeholder="Search">
 
                   <table id="dataBuku" class="table table-bordered table-hover">
                     <thead>
@@ -55,7 +55,7 @@
                         <td><?=$item->Tgl_pinjam;?></td>
                         <?php if($item->Tgl_kembali == NULL || $item->Tgl_kembali == 0000-00-00){ ?>
                         <td>
-                          <a class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i> Buku Belum dikembalikan</a>
+                          <a class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i> Buku Belum Dikembalikan</a>
                         </td>
                         <?php }else{ ?>
                         <td>

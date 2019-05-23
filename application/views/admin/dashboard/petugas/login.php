@@ -44,7 +44,7 @@
           <input type="text" name="username" class="input" placeholder="Username">
           <br>
           <br>
-          <input type="text" name="password" class="input" placeholder="Password">
+          <input type="password" name="password" class="input" placeholder="Password">
           <br>
           <br>
           <b>

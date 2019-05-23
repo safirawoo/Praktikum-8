@@ -16,6 +16,7 @@
             <div class="box">
                 <div class="box-body">
                 <h3>SELAMAT DATANG!</h3>
+                <h4> <b>-- The more that you read, the more things you will know --</h4>
                 </div>
               </div>
             </div>
